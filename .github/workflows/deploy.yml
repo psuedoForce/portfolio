@@ -35,3 +35,5 @@ jobs:
           folder: dist
           branch: gh-pages
           clean: true # Automatically removes old files from gh-pages
+          single-commit: true
+          nojekyll: true
