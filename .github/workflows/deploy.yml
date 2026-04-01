@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main] # Runs every time you push to main
+    branches: [main]
 
 permissions:
   contents: write
@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Node ⚙️
-        uses: actions/setup-node@v4 # Or actions/setup-node@v4
+        uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
@@ -25,8 +25,13 @@ jobs:
           npm install
           npm run build
 
+      # This step is a "sanity check" to ensure the dist folder actually exists
+      - name: Check build output 🔍
+        run: ls -R dist
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist # The folder Vite outputs
-          branch: gh-pages # The branch deployment is pushed to
+          folder: dist
+          branch: gh-pages
+          clean: true # Automatically removes old files from gh-pages
