@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import type { Variants } from 'framer-motion';
-import { Mail, ExternalLink, MapPin, Smartphone, Server, Code2, Layers, Heart, HeartIcon } from 'lucide-react';
+import { Mail, ExternalLink, MapPin, Smartphone, Server, Code2, Layers, HeartIcon } from 'lucide-react';
 import {
   SiAndroid, SiKotlin, SiGo, SiRuby, SiAngular, SiTypescript, SiCplusplus, SiQt,
   SiJavascript, SiPython, SiMongodb, SiPostgresql,
