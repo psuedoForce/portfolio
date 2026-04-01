@@ -384,7 +384,7 @@ function App() {
       {/* Footer */}
       <footer style={{ padding: '40px 5%', textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.05)', marginTop: '40px' }}>
         <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-          Designed with {getTechIcon("heart")} by Abhinav Kumar.
+          Designed with {getTechIcon("heart")} by Abhinav
         </p>
       </footer>
     </>
