@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import type { Variants } from 'framer-motion';
-import { Mail, ExternalLink, MapPin, Smartphone, Server, Code2, Layers, Heart } from 'lucide-react';
+import { Mail, ExternalLink, MapPin, Smartphone, Server, Code2, Layers, Heart, HeartIcon } from 'lucide-react';
 import {
   SiAndroid, SiKotlin, SiGo, SiRuby, SiAngular, SiTypescript, SiCplusplus, SiQt,
   SiJavascript, SiPython, SiMongodb, SiPostgresql,
@@ -45,8 +45,8 @@ const getTechIcon = (tech: string) => {
     case 'firebase': return <SiFirebase color="#FFCA28" className="w-3.5 h-3.5 mr-1" style={{ marginRight: '6px' }} />;
     case 'graphql': return <SiGraphql color="#E10098" className="w-3.5 h-3.5 mr-1" style={{ marginRight: '6px' }} />;
     case 'jetpack compose': return <Layers color="#4285F4" className="w-3.5 h-3.5 mr-1" style={{ marginRight: '6px' }} />;
-    case 'heart': return <Heart color="#CC342D" className="w-3.5 h-3.5 mr-1" style={{ marginRight: '6px' }} />;
-    default: return <Code2 className="w-3.5 h-3.5 mr-1" style={{ marginRight: '6px' }} />;
+    case 'heart': return <HeartIcon color="#CC342D" fill="#CC342D" className="w-3.5 h-3.5 mx-1" style={{ marginRight: '6px', marginLeft: '6px' }} />;
+    default: return <Code2 className="w-3.5 h-3.5 mr-1" style={{ marginRight: '6px', marginLeft: '6px' }} />;
   }
 };
 
@@ -383,8 +383,8 @@ function App() {
 
       {/* Footer */}
       <footer style={{ padding: '40px 5%', textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.05)', marginTop: '40px' }}>
-        <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-          Designed with {getTechIcon("heart")} by AK
+        <p style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
+          Made with {getTechIcon("heart")} by AK
         </p>
       </footer>
     </>
